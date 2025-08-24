@@ -4,7 +4,6 @@ import 'package:flower_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 final RouteObserver<ModalRoute<void>> routeObserver =
     RouteObserver<ModalRoute<void>>();
 void main() {
@@ -21,16 +20,14 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-
-      builder: (context, child) =>  MaterialApp(
+      builder: (context, child) => MaterialApp(
         theme: AppTheme.lightTheme,
         debugShowCheckedModeBanner: false,
         home: child,
         navigatorObservers: [routeObserver],
         onGenerateRoute: AppRoutes.generateRoute,
-        initialRoute:Routes.login,
+        initialRoute: Routes.mainLayout,
       ),
-    
     );
   }
 }
